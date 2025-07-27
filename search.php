@@ -1,4 +1,7 @@
+
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 include "db.php";
 ?>
 
@@ -14,7 +17,7 @@ include "db.php";
     </style>
 </head>
 <body>
-    <h2>Search Users</h2>
+    <h2>Search Users 🔍</h2>
     <form method="GET">
         <input type="text" name="q" placeholder="Enter username..." required>
         <input type="submit" value="Search">
