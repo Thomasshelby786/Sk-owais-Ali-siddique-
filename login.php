@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 include "db.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -22,14 +24,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <title>Login - Godfather Panel</title>
     <style>
-        body { font-family: Arial; background: #1a1a1a; color: white; text-align: center; margin-top: 100px; }
-        input { padding: 10px; margin: 10px; width: 200px; }
-        .btn { background: #0f0; color: #000; cursor: pointer; }
+        body { background: #111; color: white; text-align: center; font-family: sans-serif; padding-top: 100px; }
+        input { padding: 10px; margin: 10px; width: 250px; }
+        .btn { background: #0f0; color: #000; border: none; padding: 10px 20px; cursor: pointer; }
         .btn:hover { background: #ff0; }
     </style>
 </head>
 <body>
-    <h2>Login to Godfather Panel</h2>
+    <h2>Login to Godfather Panel 🔐</h2>
     <form method="POST">
         <input type="text" name="username" placeholder="👤 Username" required><br>
         <input type="password" name="password" placeholder="🔒 Password" required><br>
@@ -38,3 +40,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php if (isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
 </body>
 </html>
+
